@@ -1,0 +1,5 @@
+node_modules
+.env
+database
+backend-node/package.json
+backend-node/package-lock.json

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+    <title>HomePage</title>
+  </head>
+  <body>
+    <%- include("./partials/scripts") %> <%- include("./partials/nav") %>
+    <div class="container mt-3">
+      <div class="row row-cols-4">
+        <% if (locals.blogs) { %> <% blogs.forEach(blog => { %>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img src="<%= blog.cover_url %>" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"><%= blog.title %></h5>
+              <h6>By: <%=blog.author.full_name %></h6>
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              <a href="/blog/<%= blog._id %>" class="btn btn-primary">Read</a>
+            </div>
+          </div>
+        </div>
+        <% }) %> <% } %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+    <title>Post Blog</title>
+  </head>
+  <body>
+    <%- include("./partials/scripts") %> <%- include("./partials/nav") %>
+    <div class="container mt-3">
+      <form
+        action="/api/create-blog"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="col-md-12">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="title"
+            class="form-control"
+            id="title"
+            placeholder="Blog Title"
+            name="title"
+          />
+        </div>
+        <label for="content">Body</label>
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="content of your blog"
+            id="content"
+            name="content"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="cover_url" class="form-label">Blog cover</label>
+          <input
+            class="form-control"
+            type="file"
+            id="cover_url"
+            name="cover_url"
+          />
+        </div>
+        <div class="container mt-2"></div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

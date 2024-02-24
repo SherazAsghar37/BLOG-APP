@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  backend:
+    build: ./backend-node
+    restart: always
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+      - 5555:5555
+    depends_on:
+      - database
+    env_file:
+      - .env
+  database:
+    image: "mongo:4.4.18"
+    restart: always
+    expose:
+      - 27017
+    volumes:
+      - ./database:/data/db
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
