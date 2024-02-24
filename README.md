@@ -16,11 +16,11 @@ Start the application: `npm start`
 1: execute in project root directory docker-compose up -d
 
 ## Features
-User Authentication: Secure login and signup functionality using JSON Web Tokens (JWT).
-Intuitive User Interface: EJS templates and Bootstrap styling provide a clean and user-friendly experience.
-Blog Posting: Users can easily create and upload their blogs.
-Blog Reading: Browse through a collection of blogs uploaded by other users.
-Commenting: Engage with other users by commenting on their blogs.
+User Authentication: Secure login and signup functionality using JSON Web Tokens (JWT). <br />
+Intuitive User Interface: EJS templates and Bootstrap styling provide a clean and user-friendly experience. <br />
+Blog Posting: Users can easily create and upload their blogs. <br />
+Blog Reading: Browse through a collection of blogs uploaded by other users. <br />
+Commenting: Engage with other users by commenting on their blogs. <br />
 
 ## Tech Stack
 Back-end: `Express JS`, `Node 20`, `Typescript`
